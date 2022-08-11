@@ -7,6 +7,7 @@ CREATE TABLE animals (
     escape_attempts integer NOT NULL,
     neutered boolean,
     weight_kg numeric NOT NULL,
+    species varchar(100),
     CONSTRAINT animals_pkey PRIMARY KEY (id)
 
 );
