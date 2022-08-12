@@ -102,3 +102,26 @@ WHERE
     animals.name IN ('Angemon', 'Boarmon')
     AND owners.full_name = 'Dean Winchester';
 
+
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES ('William Tatcher', 45, '2000-04-23'),
+('Maisy Smith', 26, '2019-01-17'),
+('Stephanie Mendez', 64, '1981-05-04'),
+('Jack Harkness', 38, '2008-08-06');
+
+
+INSERT INTO specializations (species_id, vet_id)
+SELECT species_id, vet_id
+FROM species, vets
+WHERE species.name = 'Pokemon' AND vets.name = 'William Tatcher';
+
+
+
+
+/*
+
+    Vet William Tatcher is specialized in Pokemon.
+    Vet Stephanie Mendez is specialized in Digimon and Pokemon.
+    Vet Jack Harkness is specialized in Digimon.
+
+*/

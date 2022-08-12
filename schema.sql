@@ -32,3 +32,23 @@ ALTER TABLE
     animals
 ADD
     COLUMN owner_id INT REFERENCES owners;
+
+CREATE TABLE vets(
+    id SERIAL PRIMARY KEY,
+    name text NOT NULL,
+    age integer NOT NULL,
+    date_of_graduation date NOT NULL
+);
+
+CREATE TABLE specializations(
+    species_id integer NOT NULL REFERENCES species,
+    vet_id integer NOT NULL REFERENCES vets,
+    PRIMARY KEY (species_id, vet_id)
+);
+
+CREATE TABLE visits(
+    animal_id integer NOT NULL REFERENCES animals,
+    vet_id integer NOT NULL REFERENCES vets,
+    date_of_visit date NOT NULL,
+    PRIMARY KEY (animal_id, vet_id)
+);
