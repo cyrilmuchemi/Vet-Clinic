@@ -102,3 +102,301 @@ WHERE
     animals.name IN ('Angemon', 'Boarmon')
     AND owners.full_name = 'Dean Winchester';
 
+
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES ('William Tatcher', 45, '2000-04-23'),
+('Maisy Smith', 26, '2019-01-17'),
+('Stephanie Mendez', 64, '1981-05-04'),
+('Jack Harkness', 38, '2008-08-06');
+
+
+INSERT INTO specializations (species_id, vet_id)
+SELECT species.id, vets.id
+FROM species, vets
+WHERE species.name = 'Pokemon' AND vets.name = 'William Tatcher';
+
+INSERT INTO specializations (species_id, vet_id)
+SELECT species.id, vets.id
+FROM species, vets
+WHERE species.name IN ('Pokemon', 'Digimon') AND vets.name = 'Stephanie Mendez';
+
+INSERT INTO specializations (species_id, vet_id)
+SELECT species.id, vets.id
+FROM species, vets
+WHERE species.name IN ('Digimon') AND vets.name = 'Jack Harkness';
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'May 24, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Agumon'
+    AND vets.name = 'William Tatcher';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'July 22, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Agumon'
+    AND vets.name = 'Stephanie Mendez';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'February 2, 2021'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Gabumon'
+    AND vets.name = 'Jack Harkness';
+    
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'January 5, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Pikachu'
+    AND vets.name = 'Maisy Smith';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'March 8, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Pikachu'
+    AND vets.name = 'Maisy Smith';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'May 14, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Pikachu'
+    AND vets.name = 'Maisy Smith';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'May 4, 2021'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Devimon'
+    AND vets.name = 'Stephanie Mendez';
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'February 24, 2021'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Charmander'
+    AND vets.name = 'Jack Harkness';
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'December 21, 2019'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Plantmon'
+    AND vets.name = 'Maisy Smith';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'August 10, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Plantmon'
+    AND vets.name = 'William Tatcher';
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'April 7, 2021'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Plantmon'
+    AND vets.name = 'Maisy Smith';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'September 29, 2019'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Squirtle'
+    AND vets.name = 'Stephanie Mendez';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'October 3, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Angemon'
+    AND vets.name = 'Jack Harkness';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'November 4, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Angemon'
+    AND vets.name = 'Jack Harkness';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'January 24, 2019'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Boarmon'
+    AND vets.name = 'Maisy Smith';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'May 15, 2019'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Boarmon'
+    AND vets.name = 'Maisy Smith';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'February 27, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Boarmon'
+    AND vets.name = 'Maisy Smith';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'August 3, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Boarmon'
+    AND vets.name = 'Maisy Smith';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'May 24, 2020'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Blossom'
+    AND vets.name = 'Stephanie Mendez';
+
+
+INSERT INTO
+    visits (animal_id, vet_id, date_of_visit)
+SELECT
+    animals.id,
+    vets.id,
+    'January 11, 2021'
+FROM
+    animals,
+    vets
+WHERE
+    animals.name = 'Blossom'
+    AND vets.name = 'William Tatcher';
